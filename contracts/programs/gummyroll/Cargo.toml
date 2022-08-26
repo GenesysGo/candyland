@@ -16,7 +16,7 @@ cpi = ["no-entrypoint"]
 default = []
 
 [dependencies]
-anchor-lang = { git = "https://github.com/GenesysGo/anchor", branch = "tracy/test-validator-geyser-config-and-spl-version", features = ["init_if_needed"] }
+anchor-lang = { git = "https://github.com/GenesysGo/anchor", branch = "tracy/test-validator-geyser-config-and-spl-version" }
 bytemuck = "1.8.0"
 concurrent-merkle-tree = { path="../../../lib/concurrent-merkle-tree", features = [ "sol-log" ]}
 candy-wrapper = { path="../candy-wrapper", features = [ "no-entrypoint" ]}

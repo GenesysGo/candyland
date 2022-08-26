@@ -16,7 +16,7 @@ cpi = ["no-entrypoint"]
 default = []
 
 [dependencies]
-anchor-lang = { git = "https://github.com/GenesysGo/anchor", branch = "tracy/test-validator-geyser-config-and-spl-version" , features = ["init_if_needed"]}
+anchor-lang = { git = "https://github.com/GenesysGo/anchor", branch = "tracy/test-validator-geyser-config-and-spl-version" , features = ["init-if-needed"]}
 anchor-spl = { git = "https://github.com/GenesysGo/anchor", branch = "tracy/test-validator-geyser-config-and-spl-version" }
 spl-token = { version = "3.3.0", features = [ "no-entrypoint" ] }
 spl-associated-token-account = { version = "1.1.1", features = [ "no-entrypoint" ] }
