@@ -907,6 +907,7 @@ pub mod bubblegum {
                             &ctx.accounts.owner.key(),
                             &ctx.accounts.owner.key(),
                             &ctx.accounts.mint.key(),
+                            &ctx.accounts.token_program.key(),
                         ),
                         &[
                             ctx.accounts.owner.to_account_info(),
