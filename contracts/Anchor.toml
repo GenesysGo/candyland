@@ -10,6 +10,7 @@ program = "./target/deploy/candy_wrapper.so"
 
 [test.validator]
 url = "https://api.mainnet-beta.solana.com"
+geyser_plugin_config = "./config.json"
 
 [[test.validator.clone]]
 address = "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s"

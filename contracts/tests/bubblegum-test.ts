@@ -328,7 +328,7 @@ describe("bubblegum", function () {
     const metadata: MetadataArgs = {
       name: "test",
       symbol: "test",
-      uri: "www.solana.com",
+      uri: "https://www.bubblegum-nfts.com/api/metadata?assetId=hdP8QRNhzvj",
       sellerFeeBasisPoints: 0,
       primarySaleHappened: false,
       isMutable: false,
@@ -570,7 +570,7 @@ describe("bubblegum", function () {
     const metadata: MetadataArgs = {
       name: "test",
       symbol: "test",
-      uri: "www.solana.com",
+      uri: "https://www.bubblegum-nfts.com/api/metadata?assetId=hdP8QRNhzvj",
       sellerFeeBasisPoints: 0,
       primarySaleHappened: false,
       isMutable: false,
@@ -802,7 +802,7 @@ describe("bubblegum", function () {
     const metadata = {
       name: "test",
       symbol: "test",
-      uri: "www.solana.com",
+      uri: "https://www.bubblegum-nfts.com/api/metadata?assetId=hdP8QRNhzvj",
       sellerFeeBasisPoints: 0,
       primarySaleHappened: false,
       isMutable: false,
@@ -813,7 +813,7 @@ describe("bubblegum", function () {
       uses: null,
       creators: [],
     };
-    console.log("About to mint")
+    console.log("About to mint");
     let mintWithRequestIx = createMintV1Instruction(
       {
         merkleSlab: merkleRollKeypair.publicKey,
@@ -834,9 +834,9 @@ describe("bubblegum", function () {
       [mintWithRequestIx],
       [randomRequester],
       true,
-      true,
+      true
     );
-    console.log("Minted")
+    console.log("Minted");
     expectedMintRequestState = MintRequest.fromArgs({
       ...expectedMintRequestState,
       numMintsApproved: new BN(1),
@@ -869,10 +869,12 @@ describe("bubblegum", function () {
       !requestInfo,
       `Request info should have been closed, but is instead ${requestInfo}`
     );
-    let numMintsApproved = new BN(expectedAuthorityState.numMintsApproved).toNumber();
+    let numMintsApproved = new BN(
+      expectedAuthorityState.numMintsApproved
+    ).toNumber();
     expectedAuthorityState = TreeConfig.fromArgs({
       ...expectedAuthorityState,
-      numMintsApproved: numMintsApproved - 1
+      numMintsApproved: numMintsApproved - 1,
     });
     await assertOnChainTreeAuthority(
       connection,

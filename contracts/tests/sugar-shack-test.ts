@@ -413,7 +413,7 @@ describe("sugar-shack", () => {
       compressedNFTMetadata = {
         name: "test",
         symbol: "test",
-        uri: "www.solana.com",
+        uri: "https://www.bubblegum-nfts.com/api/metadata?assetId=hdP8QRNhzvj",
         sellerFeeBasisPoints: 100,
         primarySaleHappened: false,
         isMutable: false,
